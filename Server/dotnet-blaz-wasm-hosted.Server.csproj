@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <UserSecretsId>dotnet-blaz-wasm-hosted.Server-28649469-D832-42D3-8BDF-A52A868C61F0</UserSecretsId>
+    <UserSecretsId>dotnet-blaz-wasm-hosted.Server-EF48EEC3-01E7-480F-93E1-A265A7F720E2</UserSecretsId>
+    <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
     <RootNamespace>dotnet-blaz-wasm-hosted.Server</RootNamespace>
     <AssemblyName>$(AssemblyName.Replace(' ', '_'))</AssemblyName>
   </PropertyGroup>

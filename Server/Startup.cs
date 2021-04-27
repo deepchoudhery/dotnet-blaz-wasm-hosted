@@ -26,7 +26,10 @@ namespace dotnet_blaz_wasm_hosted.Server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAdB2C"));
+                .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"))
+                    .EnableTokenAcquisitionToCallDownstreamApi()
+                        .AddDownstreamWebApi("DownstreamApi", Configuration.GetSection("DownstreamApi"))
+                        .AddInMemoryTokenCaches();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
