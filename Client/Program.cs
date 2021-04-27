@@ -26,8 +26,8 @@ namespace dotnet_blaz_wasm_hosted.Client
 
             builder.Services.AddMsalAuthentication(options =>
             {
-                builder.Configuration.Bind("AzureAd", options.ProviderOptions.Authentication);
-                options.ProviderOptions.DefaultAccessTokenScopes.Add("api://api.id.uri/access_as_user");
+                builder.Configuration.Bind("AzureAdB2C", options.ProviderOptions.Authentication);
+                options.ProviderOptions.DefaultAccessTokenScopes.Add("https://qualified.domain.name/api.id.uri/access_as_user");
             });
 
             await builder.Build().RunAsync();
